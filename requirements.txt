@@ -1,0 +1,10 @@
+dash==2.6.0
+dash-tools
+pandas
+gunicorn==19.9.0
+Flask==2.2.2
+Werkzeug==2.2.2
+numpy
+scikit_learn
+plotly
+openpyxl
