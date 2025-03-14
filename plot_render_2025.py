@@ -47,8 +47,11 @@ for i in AREA:
     area=i
     print(area)
 from dash import Output
-from dash.dash import Input
-app = dash.Dash(__name__)
+from dash import Dash
+from dash.dash import Input    
+import flask, multiprocessing
+app = Dash(__name__, suppress_callback_exceptions=True)
+server=app.server
 # Build dash app layout
 app.layout = html.Div(children=[ html.H1('Sales Statistics Dashboard', 
                                 style={'textAlign': 'center','color': 'green','font-size': 40}),
@@ -151,9 +154,7 @@ def update_output(date,sales_rep):
       
     return[fig_0,curve3,curve4,curve12]
 
-port=8060
-def open_browser() :
-    webbrowser.open_new("http://localhost:{}".format(port))                 
 if __name__ == '__main__':
-    Timer(1,open_browser).start();
-    app.run_server(port=8060) 
+    #Timer(1,open_browser).start();
+        
+    app.run_server(debug=False)
