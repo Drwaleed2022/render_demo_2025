@@ -70,12 +70,12 @@ app.layout = html.Div(children=[ html.H1('Sales Statistics Dashboard',
                                 # Segment 2
                             
                                         html.Div([                                        
-                                        html.Div(dcc.Graph(id='curve3'), style={'font-size': 25,'height':'900px','width':'1500px'}),
-                                        html.Div(dcc.Graph(id='curve4'), style={'font-size': 25,'height':'900px','width':'1500px'})
+                                        html.Div(dcc.Graph(id='curve3'), style={'font-size': 25,'width':'1500px'}),
+                                        html.Div(dcc.Graph(id='curve4'), style={'font-size': 25,'width':'1500px'})
                                 ], style={'font-size': 25,'display': 'flex'}),
                                 # Segment 3
                                 html.Div([
-                                        html.Div(dcc.Graph(id='curve12'),style={'font-size': 25,'height':'900px','width':'3000px'})
+                                        html.Div(dcc.Graph(id='curve12'),style={'font-size': 25,'width':'3000px'})
                                 ], style={'font-size': 25,'display': 'flex'}),
                                 
                                 
@@ -145,12 +145,12 @@ def update_output(date,sales_rep):
       showlegend=False,
       font=dict(color='blue', size=30))
     curve3=px.scatter(rep_25.loc[['Shimaa','Israa','Aya','Ihab','Isupply','Omet','Konty']],y=rep_25[date].loc[['Shimaa','Israa','Aya','Ihab','Isupply','Omet','Konty']],text=rep_25[date].loc[['Shimaa','Israa','Aya','Ihab','Isupply','Omet','Konty']],size=rep_25[date].loc[['Shimaa','Israa','Aya','Ihab','Isupply','Omet','Konty']], color=date,hover_name=['Shimaa','Israa','Aya','Ihab','Isupply','Omet','Konty'],size_max=160,title='Retail Sales in specific month ')
-    curve3.update_layout(paper_bgcolor = "white",height=750,title_automargin=False,legend_font_size=35,font=dict(color='blue', size=30))
+    curve3.update_layout(paper_bgcolor = "white",title_automargin=False,legend_font_size=35,font=dict(color='blue', size=30))
     curve4=px.bar(rep_25.loc[sales_rep],y=sales_rep,color=Date,text_auto=True,title='Retail Sales per rep')
-    curve4.update_layout(paper_bgcolor = "white",height=750,font=dict(color='green', size=30))
+    curve4.update_layout(paper_bgcolor = "white",font=dict(color='green', size=30))
     curve12= px.imshow(rep_25,x=rep_25.columns,y=rep_25.index,text_auto=True,color_continuous_scale='RdBu_r', aspect="auto",title='Reps Sales YTD')
     curve12.update_xaxes(side="top")
-    curve12.update_layout(paper_bgcolor = "white",height=750,title_automargin=False,font=dict(color='blue', size=30))
+    curve12.update_layout(paper_bgcolor = "white",title_automargin=False,font=dict(color='blue', size=30))
       
     return[fig_0,curve3,curve4,curve12]
 
