@@ -14,21 +14,21 @@ import calendar
 import datetime
 import gunicorn
 import openpyxl
-df_sales=pd.read_excel("C:/TRYPHARMA/gethup_render/df_sales.xlsx")
+df_sales=pd.read_excel("https://raw.githubusercontent.com/Drwaleed2022/render_demo_2025/main/df_sales.xlsx")
 df_sales.set_index('Area',inplace=True)
-rep_25=pd.read_excel("C:/TRYPHARMA/gethup_render/rep_25.xlsx")
+rep_25=pd.read_excel("https://raw.githubusercontent.com/Drwaleed2022/render_demo_2025/main/rep_25.xlsx")
 rep_25.set_index('Sales_rep',inplace=True)
-rep_profit_25=pd.read_excel("C:/TRYPHARMA/gethup_render/rep_profit_25.xlsx")
+rep_profit_25=pd.read_excel("https://raw.githubusercontent.com/Drwaleed2022/render_demo_2025/main/rep_profit_25.xlsx")
 rep_profit_25.set_index('Sales_rep',inplace=True)
-Area_global=pd.read_excel("C:/TRYPHARMA/gethup_render/Area_global.xlsx")
+Area_global=pd.read_excel("https://raw.githubusercontent.com/Drwaleed2022/render_demo_2025/main/Area_global.xlsx")
 Area_global.set_index('Area',inplace=True)
-Area_rep_25=pd.read_excel("C:/TRYPHARMA/gethup_render/Area_rep_25.xlsx")
+Area_rep_25=pd.read_excel("https://raw.githubusercontent.com/Drwaleed2022/render_demo_2025/main/Area_rep_25.xlsx")
 Area_rep_25.set_index('Area_rep',inplace=True)
-Area_25=pd.read_excel("C:/TRYPHARMA/gethup_render/Area_25.xlsx")
+Area_25=pd.read_excel("https://raw.githubusercontent.com/Drwaleed2022/render_demo_2025/main//Area_25.xlsx")
 Area_25.set_index('Area',inplace=True)
-rep_target=pd.read_excel("C:/TRYPHARMA/gethup_render/rep_target.xlsx")
+rep_target=pd.read_excel("https://raw.githubusercontent.com/Drwaleed2022/render_demo_2025/main/rep_target.xlsx")
 rep_target.set_index('Sales_rep',inplace=True)
-debts_area=pd.read_excel("C:/TRYPHARMA/gethup_render/debts_area.xlsx")
+debts_area=pd.read_excel("https://raw.githubusercontent.com/Drwaleed2022/render_demo_2025/main/debts_area.xlsx")
 debts_area.set_index('المنطقة',inplace=True)
 Date=['Jan_2025', 'Feb_2025', 'Mar_2025', 'Apr_2025', 'May_2025', 'Jun_2025','Jul_2025', 'Aug_2025', 'Sep_2025', 'Oct_2025', 'Nov_2025', 'Dec_2025']
 for i in Date:
