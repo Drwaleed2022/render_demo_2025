@@ -95,8 +95,8 @@ app.layout = html.Div(children=[ html.H1('Sales Statistics Dashboard',
                                 ], style={'font-size': 25,'display': 'flex'}),
                                 # Segment 4
                                 html.Div([
-                                        html.Div(dcc.Graph(id='curve12'),style={'font-size': 25,'height':'900px','width':'3000px'})
-                                ], style={'font-size': 25,'display': 'flex'}),
+                                        html.Div(dcc.Graph(id='curve12'),style={'font-size': 15,'height':'900px','width':'3000px'})
+                                ], style={'font-size': 15,'display': 'flex'}),
                                 
                                 
                                 ])
