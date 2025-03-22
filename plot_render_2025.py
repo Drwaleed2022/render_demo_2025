@@ -203,7 +203,7 @@ def update_output(date,area_rep):
     curve4.update_layout(paper_bgcolor = "white",width=1500,height=750,font=dict(color='blue', size=30))
     curve12= px.imshow(rep_25,x=rep_25.columns,y=rep_25.index,text_auto=True,color_continuous_scale='RdBu_r', aspect="auto",title='Reps Sales YTD')
     curve12.update_xaxes(side="top")
-    curve12.update_layout(paper_bgcolor = "white",height=750,title_automargin=False,font=dict(color='blue', size=30))
+    curve12.update_layout(paper_bgcolor = "white",height=750,title_automargin=False,font=dict(color='blue', size=20))
       
     return[fig_0,curve1,fig_egy,curve2,curve3,curve4,curve12]
 
